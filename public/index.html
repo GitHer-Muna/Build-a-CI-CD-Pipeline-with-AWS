@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps CI/CD Pipeline Demo</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 DevOps CI/CD Pipeline</h1>
+            <p class="subtitle">Automated Build & Deployment with AWS</p>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h2>Welcome to the Demo Application</h2>
+                <p>This application demonstrates a complete CI/CD pipeline using AWS services</p>
+            </section>
+
+            <section class="features">
+                <h3>Pipeline Features</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon">📦</div>
+                        <h4>Source Control</h4>
+                        <p>GitHub repository integration with AWS CodePipeline</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🔨</div>
+                        <h4>Continuous Integration</h4>
+                        <p>Automated builds and tests with AWS CodeBuild</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🚢</div>
+                        <h4>Continuous Deployment</h4>
+                        <p>Automated deployment to EC2 with AWS CodeDeploy</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🔒</div>
+                        <h4>Package Security</h4>
+                        <p>Secure dependency management with CodeArtifact</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">☁️</div>
+                        <h4>Infrastructure as Code</h4>
+                        <p>AWS CloudFormation for infrastructure automation</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">📊</div>
+                        <h4>Monitoring</h4>
+                        <p>Health checks and application monitoring</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="status">
+                <h3>Application Status</h3>
+                <div class="status-container">
+                    <div class="status-item">
+                        <span class="label">Server Status:</span>
+                        <span class="value" id="server-status">Checking...</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">API Version:</span>
+                        <span class="value" id="api-version">Loading...</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Environment:</span>
+                        <span class="value" id="environment">Loading...</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Last Updated:</span>
+                        <span class="value" id="timestamp">Loading...</span>
+                    </div>
+                </div>
+                <button id="refresh-status" class="btn">Refresh Status</button>
+            </section>
+
+            <section class="tech-stack">
+                <h3>Technology Stack</h3>
+                <div class="tech-tags">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Express</span>
+                    <span class="tag">AWS EC2</span>
+                    <span class="tag">AWS CodePipeline</span>
+                    <span class="tag">AWS CodeBuild</span>
+                    <span class="tag">AWS CodeDeploy</span>
+                    <span class="tag">AWS CodeArtifact</span>
+                    <span class="tag">CloudFormation</span>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">S3</span>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built with ❤️ for DevOps Learning by Muna Bhattarai | <a href="/health" target="_blank">Health Check</a> | <a href="/api/info" target="_blank">API Info</a></p>
+        </footer>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
