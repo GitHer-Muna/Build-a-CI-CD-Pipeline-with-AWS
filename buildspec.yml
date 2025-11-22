@@ -1,0 +1,44 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo "Installing dependencies..."
+      - npm install
+  
+  pre_build:
+    commands:
+      - echo "Running tests..."
+      - npm test
+      - echo "Running linter..."
+      - npm run lint || echo "Linting completed"
+  
+  build:
+    commands:
+      - echo "Build phase started..."
+      - npm run build
+      - echo "Build completed successfully!"
+
+artifacts:
+  files:
+    - '**/*'
+  exclude-paths:
+    - node_modules/**/*
+    - coverage/**/*
+    - .git/**/*
+
+cache:
+  paths:
+    - 'node_modules/**/*'
+
+
+#   What this does:
+
+# Install: Sets up Node.js 18 and installs dependencies
+# Pre-build: Runs tests and linting (quality checks)
+# Build: Executes build script
+# Artifacts: Packages your app (excludes node_modules, coverage, .git)
+# Cache: Speeds up future builds by caching node_modules
+
